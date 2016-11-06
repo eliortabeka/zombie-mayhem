@@ -6,7 +6,7 @@ $(document).ready(function() {
     let $canves = $('#canves'),
       $overlayScreen = $canves.find('.overlay-screen'),
       $gameCover = $canves.find('.game-cover'),
-      $killedTitle = $canves.find('.killed-status div'),
+      $killedTitle = $canves.find('.killed-status span'),
       $lifeIcons = $canves.find('.life'),
       $muteMusic = $canves.find('#mute-music'),
       $muteSounds = $canves.find('#mute-sounds'),
