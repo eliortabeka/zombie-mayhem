@@ -16,7 +16,11 @@
   }
 
   .zombie-loader {
-    &:before { animation-duration: 0.7s!important; }
+    &:before {
+      content: '';
+      display: block;
+      animation-duration: 0.7s!important;
+    }
     transform: scale(0.5);
     margin-bottom: 20px;
   }
