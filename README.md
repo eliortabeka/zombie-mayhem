@@ -25,7 +25,7 @@ Image Sprite to Animation Generator - [Sprite Spirit](http://www.createjs.com/so
 
 CSS Tooltips - [Tootik](http://www.createjs.com/soundjs)
 
-Sound implementation - [soundjs](http://www.createjs.com/soundjs)
+Sound implementation - [SoundJS](http://www.createjs.com/soundjs)
 
 Zombie Roar Sounds from - [ArriGD](https://www.freesound.org/people/ArriGD/packs/8877/)
 
@@ -38,4 +38,4 @@ Handcrafted with love by [Elior Shalev Tabeka](http://codepen.io/eliorshalev)
 ### License
 All the Graphics are © 2016 [Elior Shalev Tabeka](http://codepen.io/eliorshalev)
 
-GNU GPL v3.0  Have fun :D
+GNU GPL v3.0,  Have fun :wink:
