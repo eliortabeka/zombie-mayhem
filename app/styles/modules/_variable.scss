@@ -1,0 +1,33 @@
+// Fonts
+/* latin */
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cinzel-Regular'), url('../fonts/i2BwM1Eq2JyiNOY_VrkubOvvDin1pK8aKteLpeZ5c0A.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+// Canves
+$canvesSizeWidth: 1024px;
+$canvesSizeHeight: 550px;
+
+// Zombies
+$zombieSprite: '../images/zombies/zombie-1.png';
+$zombie2Sprite: '../images/zombies/zombie-2.png';
+$zombie3Sprite: '../images/zombies/zombie-3.png';
+$zombie4Sprite: '../images/zombies/zombie-4.png';
+$zombie5Sprite: '../images/zombies/zombie-5.png';
+$zombie6Sprite: '../images/zombies/zombie-6.png';
+$zombieSpriteDeath: '../images/zombies/zombie-1-death.png';
+$zombie2SpriteDeath: '../images/zombies/zombie-2-death.png';
+$zombie3SpriteDeath: '../images/zombies/zombie-3-death.png';
+$zombie4SpriteDeath: '../images/zombies/zombie-4-death.png';
+$zombie5SpriteDeath: '../images/zombies/zombie-5-death.png';
+$zombie6SpriteDeath: '../images/zombies/zombie-6-death.png';
+
+// Backgrounds
+$background-1: '../images/background/bg-1.png';
+$background-2: '../images/background/bg-2.png';
+$background-3: '../images/background/bg-3.png';
+$background-4: '../images/background/bg-4.png';

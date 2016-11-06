@@ -1,0 +1,34 @@
+// Zombie Walk
+@keyframes walk {
+  to { transform: translateX(-$canvesSizeWidth); }
+}
+
+// Reload Trigger Spin
+@keyframes reload {
+  to { transform: rotate(6turn); }
+}
+
+// Reload Ammo Spin
+@keyframes reload-trigger {
+  0% { transform: rotate(-360deg); }
+  20% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+// Blinking Text
+@keyframes flash {
+  0% { opacity: 1; }
+  25% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+  75% { opacity: 0.4; }
+  100% { opacity: 0.2; }
+}
+
+// Bleeding Text
+@keyframes dripping {
+  0% { text-shadow: 6px 4px 0 red, -5px 5px 0 red, -3px 6px 0 red, 2px 11px 0 red; }
+  30% { text-shadow: 5px 3px 0 red, -4px 4px 0 red, -2px 5px 0 red, 1px 10px 0 red; }
+  60% { text-shadow: 6px 4px 0 red, -5px 5px 0 red, -3px 6px 0 red, 2px 11px 0 red; }
+  90% { text-shadow: 5px 3px 0 red, -4px 4px 0 red, -2px 5px 0 red, 1px 10px 0 red; }
+  100% { text-shadow: 6px 4px 0 red, -5px 5px 0 red, -3px 6px 0 red, 2px 11px 0 red; }
+}

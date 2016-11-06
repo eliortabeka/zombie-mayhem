@@ -1,0 +1,76 @@
+// Zombies Types
+@for $i from 1 through 6 {
+  .zombie-#{$i} {
+    @if $i==1 {
+      &:before {
+          @include spriteSpirit('zombie-1', $zombieSprite, true, 194px, 4080px, 16, .6, 0, false);
+      }
+      &.killed {
+        &:before {
+          @include spriteSpirit('zombie-1-death', $zombieSpriteDeath, true, 340px, 5220px, 20, .6, 0, false);
+          transform: translate(158px, 22px);
+        }
+      }
+    }
+    @if $i==2 {
+      &:before {
+        @include spriteSpirit('zombie-2', $zombie2Sprite, true, 211px, 4096px, 16, .6, 0, false);
+      }
+
+      &.killed {
+        &:before {
+          @include spriteSpirit('zombie-2-death', $zombie2SpriteDeath, true, 347px, 5400px, 20, .6, 0, false);
+          transform: translate(159px, 31px);
+        }
+      }
+    }
+    @if $i==3 {
+      &:before {
+        @include spriteSpirit('zombie-3', $zombie3Sprite, true, 189px, 3744px, 16, .6, 0, false);
+      }
+
+      &.killed {
+        &:before {
+         @include spriteSpirit('zombie-3-death', $zombie3SpriteDeath, true, 334px, 5120px, 20, .6, 0, false);
+          transform: translate(156px, 25px);
+        }
+      }
+    }
+    @if $i==4 {
+      &:before {
+        @include spriteSpirit('zombie-4', $zombie4Sprite, true, 386px, 6000px, 16, .6, 0, false);
+      }
+
+      &.killed {
+        &:before {
+          @include spriteSpirit('zombie-4-death', $zombie4SpriteDeath, true, 497px, 6416px, 16, .6, 0, false);
+          transform: translate(65px, 45px);
+        }
+      }
+    }
+    @if $i==5 {
+      &:before {
+        @include spriteSpirit('zombie-5', $zombie5Sprite, true, 386px, 6016px, 16, .6, 0, false);
+      }
+
+      &.killed {
+        &:before {
+         @include spriteSpirit('zombie-5-death', $zombie5SpriteDeath, true, 488px, 6240px, 16, .6, 0, false);
+          transform: translate(70px, 37px);
+        }
+      }
+    }
+    @if $i==6 {
+      &:before {
+        @include spriteSpirit('zombie-6', $zombie6Sprite, true, 386px, 6464px, 16, .6, 0, false);
+      }
+
+      &.killed {
+        &:before {
+         @include spriteSpirit('zombie-6-death', $zombie6SpriteDeath, true, 510px, 6704px, 16, .6, 0, false);
+          transform: translate(75px, 44px);
+        }
+      }
+    }
+  }
+}

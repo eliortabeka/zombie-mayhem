@@ -1,0 +1,121 @@
+// Ammo
+.ammo {
+  background: url("../images/ui/icons.png") no-repeat;
+  background-position: 0 -134px;
+  background-size: 114px;
+  width: 70px;
+  height: 74.5px;
+  transition: transform .3s ease;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  z-index: 10000;
+  display: block;
+
+  .intro &,
+  .end-game &,
+  .game-over &,
+  .level-message & {
+    display: none;
+  }
+
+  // Ammo Clip States
+  @for $i from 0 through 6 {
+    &[data-ammo="#{$i}"] {
+      @if $i==0 {
+        background-position: 0px -581px;
+        transform: rotate(360deg);
+      }
+      @if $i==1 {
+        background-position: 0px -507px;
+        transform: rotate(300deg);
+      }
+      @if $i==2 {
+        background-position: 0px -432px;
+        transform: rotate(240deg);
+      }
+      @if $i==3 {
+        background-position: 0px -358px;
+        transform: rotate(180deg);
+      }
+      @if $i==4 {
+        background-position: 0 -283px;
+        transform: rotate(120deg);
+      }
+      @if $i==5 {
+        background-position: 0 -208px;
+        transform: rotate(60deg);
+      }
+      @if $i==6 {
+        background-position: 0 -134px;
+      }
+    }
+  }
+
+  &.reload {
+    animation: reload .6s ease;
+  }
+}
+
+// Reload Key Hint
+.reload-key {
+  @include fillPosition();
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 9px;
+  color: #878787;
+  transform: translateX(0);
+  transition: transform .3s cubic-bezier(0.6, 1.14, 0.04, 1.02), opacity .3s cubic-bezier(0.6, 1.14, 0.04, 1.02);
+  z-index: 100000;
+
+  [data-ammo="6"] &,
+  .intro &,
+  .end-game &,
+  .game-over &,
+  .level-message & {
+    display: none;
+  }
+}
+
+// Reload Hint
+.reload-hint {
+  position: absolute;
+  bottom: 55px;
+  right: 25px;
+  transform: translateX(100%);
+  transition: transform .3s cubic-bezier(0.6, 1.14, 0.04, 1.02), opacity .3s cubic-bezier(0.6, 1.14, 0.04, 1.02);
+  padding: 0 28px;
+  color: #ffffff;
+  opacity: 0;
+  z-index: 1000000;
+  display: block;
+
+  &.visible {
+    transform: translateX(0);
+    opacity: 1;
+
+    .reload-trigger {
+      animation: reload-trigger 2s ease infinite;
+    }
+  }
+
+  .intro &,
+  .end-game &,
+  .game-over &,
+  .level-message & {
+    display: none;
+  }
+}
+
+// Reload Trigger
+.reload-trigger {
+  cursor: pointer;
+  background: url("../images/ui/icons.png") no-repeat;
+  background-size: 114px;
+  background-position: bottom right;
+  width: 35px;
+  height: 35px;
+  transition: transform .3s ease;
+}

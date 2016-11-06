@@ -1,0 +1,28 @@
+// Walk Speed
+@for $i from 1 through 6 {
+  $random-speed: $i + 10;
+  $animation-speed: $i / 2;
+
+  .walk-speed-#{$i} {
+    @if $i==1 { animation-duration: $random-speed + s; &:before { animation-duration: $animation-speed + s; } }
+    @if $i==2 { animation-duration: $random-speed + s; &:before { animation-duration: $animation-speed + s; } }
+    @if $i==3 { animation-duration: $random-speed + s; &:before { animation-duration: $animation-speed + s; } }
+    @if $i==4 { animation-duration: $random-speed + s; &:before { animation-duration: $animation-speed + s; } }
+    @if $i==5 { animation-duration: $random-speed + s; &:before { animation-duration: $animation-speed + s; } }
+    @if $i==6 { animation-duration: $random-speed + s; &:before { animation-duration: $animation-speed + s; } }
+  }
+}
+
+// Visibility Delay
+@for $i from 1 through 6 {
+  $random-speed: $i/1.5;
+
+  .walk-delay-#{$i} {
+    @if $i==1 { animation-delay: $random-speed + s; }
+    @if $i==2 { animation-delay: $random-speed + s; }
+    @if $i==3 { animation-delay: $random-speed + s; }
+    @if $i==4 { animation-delay: $random-speed + s; }
+    @if $i==5 { animation-delay: $random-speed + s; }
+    @if $i==6 { animation-delay: $random-speed + s; }
+  }
+}

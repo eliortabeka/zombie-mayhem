@@ -1,0 +1,38 @@
+%reset {
+  margin: 0;
+  padding: 0;
+}
+
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+::selection {
+  background: transparent;
+}
+
+html,
+body {
+  @include dimensions($width: 100%);
+  @extend %reset;
+}
+
+body {
+  @extend %reset;
+  @extend %flex;
+  @include dimensions($width: 100%);
+  overflow: hidden;
+  background: #000000;
+  font-family: 'Century Gothic',AppleGothic,'CenturyGothic',sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

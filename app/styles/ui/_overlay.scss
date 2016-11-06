@@ -1,0 +1,97 @@
+// Overlay Screen
+.overlay-screen-levels,
+.overlay-screen {
+  @include fillPosition();
+  background: rgba(0,0,0,.8);
+  visibility: hidden;
+  transition: visibility .3s ease, opacity .3s ease;
+  z-index: 100000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+
+  .end-game &,
+  .game-over &,
+  .level-message &,
+  .game-paused & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+// Overlay Title
+.big-title {
+  top: 115px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 128px;
+  margin: 0;
+  text-shadow: 5px 3px 0 red, -4px 4px 0 red, -2px 5px 0 red, 1px 10px 0 red;
+  transition: opacity .3s ease, visibility .3s ease;
+  animation: dripping .2s ease infinite;
+  cursor: default;
+  display: none;
+
+
+  &:hover {
+    animation: flash .3s ease infinite, dripping .2s ease infinite;
+  }
+
+  div {
+    text-transform: uppercase;
+    font-size: 99px;
+    letter-spacing: 20px;
+    display: block;
+    margin-top: -73px;
+    margin-left: 31px;
+  }
+
+  &.game-over-title {
+    .game-over & {
+      display: block;
+    }
+
+    span {
+      margin-left: 18px;
+    }
+  }
+
+  &.end-game-title {
+    .end-game & {
+      display: block;
+    }
+
+    span {
+      margin-left: 19px;
+    }
+  }
+
+  &.game-pause-title {
+    .game-paused & {
+      display: block;
+    }
+  }
+
+  &.level-title {
+    .level-message & {
+      display: block;
+    }
+  }
+}
+
+// Restart Hint
+.restart-hint {
+  animation: flash 1.8s ease infinite;
+  color: #838383;
+  font-size: 23px;
+  position: absolute;
+  bottom: 109px;
+  display: none;
+  cursor: pointer;
+
+  .end-game &,
+  .game-over & {
+    display: block;
+  }
+}

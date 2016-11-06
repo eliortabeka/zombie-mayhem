@@ -1,0 +1,35 @@
+// Zombie General Style
+.zombie {
+  position: absolute;
+  bottom: 74px;
+  right: 0;
+  transform: translateX(400px);
+  animation: walk linear infinite;
+
+  &:before {
+    content: '';
+    display: block;
+  }
+
+  &.killed {
+    pointer-events: none;
+    transition: none;
+    animation-play-state: paused;
+
+    &:before {
+      pointer-events: none;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  .game-paused & {
+    pointer-events: none;
+    transition: none;
+    animation-play-state: paused;
+
+    &:before {
+      pointer-events: none;
+      animation-play-state: paused;
+    }
+  }
+}

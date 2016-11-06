@@ -1,0 +1,99 @@
+// Strength Bar
+.strength-bar {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #ffffff;
+  height: 5px;
+  border-radius: 14px;
+  opacity: 1;
+  transition: opacity .3s ease;
+
+  &.hide {
+    opacity: 0;
+  }
+
+  // Strength Bar Wide per Zombie
+  @for $i from 1 through 6 {
+    $width: $i * 15px;
+
+    .zombie-#{$i} & {
+      width: #{$width};
+    }
+  }
+
+  &:after {
+    @include fillPosition();
+    content: '';
+    background: red;
+    transition: width .3s ease;
+    display: block;
+    width: 0;
+  }
+
+  // Strength Bar Fill per Zombie
+  @for $i from 0 through 1 {
+    .zombie-1[data-strength="#{$i}"] & {
+      &:after {
+        @if $i==0 { width: 0; }
+        @if $i==1 { width: 100%; }
+      }
+    }
+  }
+  @for $i from 0 through 2 {
+    .zombie-2[data-strength="#{$i}"] & {
+      &:after {
+        @if $i==0 { width: 0; }
+        @if $i==1 { width: 50%; }
+        @if $i==2 { width: 100%; }
+      }
+    }
+  }
+  @for $i from 0 through 3 {
+    .zombie-3[data-strength="#{$i}"] & {
+      &:after {
+        @if $i==0 { width: 0; }
+        @if $i==1 { width: 33%; }
+        @if $i==2 { width: 66%; }
+        @if $i==3 { width: 100%; }
+      }
+    }
+  }
+  @for $i from 0 through 4 {
+    .zombie-4[data-strength="#{$i}"] & {
+      &:after {
+        @if $i==0 { width: 0; }
+        @if $i==1 { width: 25%; }
+        @if $i==2 { width: 50%; }
+        @if $i==3 { width: 75%; }
+        @if $i==4 { width: 100%; }
+      }
+    }
+  }
+  @for $i from 0 through 5 {
+    .zombie-5[data-strength="#{$i}"] & {
+      &:after {
+        @if $i==0 { width: 0; }
+        @if $i==1 { width: 20%; }
+        @if $i==2 { width: 40%; }
+        @if $i==3 { width: 60%; }
+        @if $i==4 { width: 80%; }
+        @if $i==5 { width: 100%; }
+      }
+    }
+  }
+  @for $i from 0 through 6 {
+    .zombie-6[data-strength="#{$i}"] & {
+      &:after {
+        @if $i==0 { width: 0; }
+        @if $i==1 { width: 25%; }
+        @if $i==2 { width: 40%; }
+        @if $i==3 { width: 55%; }
+        @if $i==4 { width: 70%; }
+        @if $i==5 { width: 85%; }
+        @if $i==6 { width: 100%; }
+      }
+    }
+  }
+}

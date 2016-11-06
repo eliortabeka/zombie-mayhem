@@ -1,0 +1,24 @@
+// bower:scss
+// endbower
+
+@import "../../bower_components/sprite-spirit/scss/sprite-spirit";
+
+// Modules
+@import "modules/variable";
+@import "modules/mixin";
+@import "modules/reset";
+@import "modules/keyframes";
+@import "modules/variable";
+
+// UI
+@import "ui/canves";
+@import "ui/loader";
+@import "ui/info-board";
+@import "ui/ammo";
+@import "ui/overlay";
+
+// Zombies
+@import "zombies/zombie";
+@import "zombies/zombies";
+@import "zombies/strength-bar";
+@import "zombies/states";

@@ -1,0 +1,106 @@
+// Game Canves
+#canves {
+  @include dimensions($width: $canvesSizeWidth, $height: 550px);
+  min-width: $canvesSizeWidth;
+  position: relative;
+  overflow: hidden;
+  background-color: #000000;
+  cursor: crosshair;
+  border-radius: 8px;
+  font-family: 'Cinzel', serif;
+  transition: background-image 1.3s ease;
+  background-repeat: no-repeat;
+  background-size: 1024px 550px;
+
+  @for $i from 1 through 4 {
+    &[data-wave="#{$i}"] {
+      @if $i == 1 {
+        background-image: url($background-1);
+      }
+      @if $i == 2 {
+        background-image: url($background-2);
+      }
+      @if $i == 3 {
+        background-image: url($background-3);
+      }
+      @if $i == 4 {
+        background-image: url($background-4);
+      }
+    }
+  }
+
+  // Game Cover
+  .game-cover {
+    @include fillPosition();
+    background: url("../images/ui/cover.jpg");
+    background-size: 1024px 550px;
+    display: none;
+    z-index: 100000;
+  }
+
+  // Brushed Frame
+  &:after {
+    @include fillPosition();
+    content: '';
+    pointer-events: none;
+    display: block;
+    background: url("../images/ui/frame.png") no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    z-index: 1000000;
+  }
+}
+
+// Github corner Icon
+.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+.github-corner {
+  position: absolute;
+  top:0;
+  right: 0;
+}
+
+// Footer
+#footer {
+  font-size: 11px;
+  color: #5a5a5a;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 21px;
+  text-align: center;
+
+  &:hover {
+    svg {
+      fill: #ff0000;
+    }
+  }
+
+  p {
+    @extend %reset;
+  }
+
+  @media screen and (max-width: 625px) {
+    text-align: center;
+  }
+
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  .credits {
+    color: #353535;
+  }
+
+  svg {
+    fill: #646464;
+    width: 15px;
+    transition: fill .3s ease;
+  }
+  .get-code.generate-code & {
+    margin-bottom: 164px;
+
+    @media screen and (max-width: 625px) {
+      margin-bottom: 208px;
+    }
+  }
+}
