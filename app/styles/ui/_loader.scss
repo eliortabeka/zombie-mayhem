@@ -4,12 +4,13 @@
   opacity: 0;
   pointer-events: none;
   z-index: 1000000;
-  background: #191919;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   transition: opacity .3s ease;
+  background: url("../images/ui/cover.jpg");
+  background-size: 1024px 550px;
 
   .loading & {
     opacity: 1;
@@ -27,9 +28,17 @@
 
   span {
     animation: flash 1.8s ease infinite;
-    color: #838383;
+    color: #ffffff;
     font-size: 9px;
     position: absolute;
-    bottom: 195px;
+    bottom: 62px;
+    right: 72px;
+  }
+
+  .loading-char {
+    background: radial-gradient(ellipse at center, black 0%, rgba(246, 246, 246, 0) 50%);
+    position: absolute;
+    bottom: -20px;
+    right: 30px;
   }
 }
