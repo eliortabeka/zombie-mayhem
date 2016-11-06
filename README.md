@@ -21,9 +21,9 @@ $ gulp serve
 
 ### Resources
 
-Image Sprite to Animation Generator - [Sprite Spirit](http://www.createjs.com/soundjs)
+Image Sprite to Animation Generator - [Sprite Spirit](https://eliorshalev.github.io/sprite-spirit/)
 
-CSS Tooltips - [Tootik](http://www.createjs.com/soundjs)
+CSS Tooltips - [Tootik](https://eliorshalev.github.io/tootik/)
 
 Sound implementation - [SoundJS](http://www.createjs.com/soundjs)
 
