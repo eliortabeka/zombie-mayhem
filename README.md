@@ -8,7 +8,7 @@ Game build with HTML5, JavaScript, jQuery, CSS3 and SCSS.
 
 
 ### Demo
-https://eliorshalev.github.io/zombie-mayhem/
+https://eliortabeka.github.io/zombie-mayhem/
 
 
 ### Usage
